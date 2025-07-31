@@ -204,11 +204,7 @@ export default function UnifrogLanding() {
                 CARACTERÍSTICAS
               </Link>
               <Link
-                href="#contacto"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection("contacto")
-                }}
+                href="/contacto"
                 className="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-sm"
               >
                 CONTACTO
@@ -225,14 +221,14 @@ export default function UnifrogLanding() {
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* Sign In Button - Desktop */}
+            {/* Contact Button - Desktop */}
             <Button
-              asChild
               variant="outline"
               size="lg"
               className="hidden md:flex border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 px-6 py-2 font-semibold"
+              onClick={() => scrollToSection("contacto")}
             >
-              <Link href="https://platform.trykalo.app">INICIAR SESIÓN</Link>
+              Contactanos
             </Button>
           </div>
 
@@ -261,22 +257,18 @@ export default function UnifrogLanding() {
                   CARACTERÍSTICAS
                 </Link>
                 <Link
-                  href="#contacto"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection("contacto")
-                  }}
+                  href="/contacto"
                   className="text-left text-gray-600 hover:text-emerald-600 font-medium py-2 transition-colors duration-200"
                 >
                   CONTACTO
                 </Link>
                 <Button
-                  asChild
                   variant="outline"
                   size="lg"
                   className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 bg-transparent w-full mt-4 font-semibold"
+                  onClick={() => scrollToSection("contacto")}
                 >
-                  <Link href="https://platform.trykalo.app">INICIAR SESIÓN</Link>
+                  Contactanos
                 </Button>
               </nav>
             </div>
@@ -285,34 +277,34 @@ export default function UnifrogLanding() {
       </header>
 
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20" id="inicio">
-        <div className="text-center">
-          <div className="space-y-6 md:space-y-8 max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-              Descubrí tu futuro con la plataforma más completa.
-            </h1>
-            <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
-              <p>Kalo ayuda a estudiantes a conocerse mejor. Explorá miles de carreras y tomá decisiones informadas.</p>
-              <p>Potenciamos a docentes y orientadores con herramientas y datos para acompañar mejor este proceso.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
-                onClick={() => scrollToSection("contacto")}
-              >
+      <main className="flex flex-col justify-center items-center text-center min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="inicio">
+        <div className="space-y-6 md:space-y-8 max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+            Descubrí tu futuro con la plataforma más completa.
+          </h1>
+          <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
+            <p>Kalo ayuda a estudiantes a conocerse mejor. Explorá miles de carreras y tomá decisiones informadas.</p>
+            <p>Potenciamos a docentes y orientadores con herramientas y datos para acompañar mejor este proceso.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
+            >
+              <Link href="/contacto">
                 Contactanos
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 px-8 py-3 text-lg font-semibold bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-                onClick={() => scrollToSection("caracteristicas")}
-              >
-                Conocé más
-              </Button>
-            </div>
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 px-8 py-3 text-lg font-semibold bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+              onClick={() => scrollToSection("caracteristicas")}
+            >
+              Conocé más
+            </Button>
           </div>
         </div>
       </main>
