@@ -5,7 +5,17 @@ import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb"
+import {
+  BrainCircuit,
+  Compass,
+  ClipboardList,
   Target,
   BookOpen,
   Users,
@@ -173,24 +183,36 @@ export default function UnifrogLanding() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Navegación principal">
-              <button
-                onClick={() => scrollToSection("nosotros")}
+              <Link
+                href="#nosotros"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("nosotros")
+                }}
                 className="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-sm"
               >
                 NOSOTROS
-              </button>
-              <button
-                onClick={() => scrollToSection("caracteristicas")}
+              </Link>
+              <Link
+                href="#caracteristicas"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("caracteristicas")
+                }}
                 className="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-sm"
               >
                 CARACTERÍSTICAS
-              </button>
-              <button
-                onClick={() => scrollToSection("contacto")}
+              </Link>
+              <Link
+                href="#contacto"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection("contacto")
+                }}
                 className="text-gray-600 hover:text-emerald-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-sm"
               >
                 CONTACTO
-              </button>
+              </Link>
             </nav>
 
             {/* Mobile menu button */}
@@ -205,11 +227,12 @@ export default function UnifrogLanding() {
 
             {/* Sign In Button - Desktop */}
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="hidden md:flex border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 px-6 py-2 font-semibold"
             >
-              INICIAR SESIÓN
+              <Link href="https://platform.trykalo.app">INICIAR SESIÓN</Link>
             </Button>
           </div>
 
@@ -217,30 +240,43 @@ export default function UnifrogLanding() {
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-100 bg-white">
               <nav className="flex flex-col space-y-4" role="navigation" aria-label="Navegación móvil">
-                <button
-                  onClick={() => scrollToSection("nosotros")}
+                <Link
+                  href="#nosotros"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("nosotros")
+                  }}
                   className="text-left text-gray-600 hover:text-emerald-600 font-medium py-2 transition-colors duration-200"
                 >
                   NOSOTROS
-                </button>
-                <button
-                  onClick={() => scrollToSection("caracteristicas")}
+                </Link>
+                <Link
+                  href="#caracteristicas"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("caracteristicas")
+                  }}
                   className="text-left text-gray-600 hover:text-emerald-600 font-medium py-2 transition-colors duration-200"
                 >
                   CARACTERÍSTICAS
-                </button>
-                <button
-                  onClick={() => scrollToSection("contacto")}
+                </Link>
+                <Link
+                  href="#contacto"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    scrollToSection("contacto")
+                  }}
                   className="text-left text-gray-600 hover:text-emerald-600 font-medium py-2 transition-colors duration-200"
                 >
                   CONTACTO
-                </button>
+                </Link>
                 <Button
+                  asChild
                   variant="outline"
                   size="lg"
                   className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 bg-transparent w-full mt-4 font-semibold"
                 >
-                  INICIAR SESIÓN
+                  <Link href="https://platform.trykalo.app">INICIAR SESIÓN</Link>
                 </Button>
               </nav>
             </div>
@@ -250,20 +286,16 @@ export default function UnifrogLanding() {
 
       {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20" id="inicio">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="space-y-6 md:space-y-8 order-1 lg:order-1">
+        <div className="text-center">
+          <div className="space-y-6 md:space-y-8 max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
               Descubrí tu futuro con la plataforma más completa.
             </h1>
-
             <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
               <p>Kalo ayuda a estudiantes a conocerse mejor. Explorá miles de carreras y tomá decisiones informadas.</p>
-
               <p>Potenciamos a docentes y orientadores con herramientas y datos para acompañar mejor este proceso.</p>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
@@ -280,30 +312,6 @@ export default function UnifrogLanding() {
               >
                 Conocé más
               </Button>
-            </div>
-          </div>
-
-          {/* Right Content - Alien with Telescope */}
-          <div className="order-2 lg:order-2">
-            <div className="w-full max-w-sm mx-auto lg:max-w-xs xl:max-w-sm">
-              <div className="relative">
-                {/* Alien Illustration Box */}
-                <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-3xl p-8 shadow-2xl border border-emerald-200">
-                  <div className="aspect-square flex items-center justify-center">
-                    {/* Placeholder for Alien with Telescope/Star Map */}
-                    <div className="w-full h-full bg-gradient-to-br from-emerald-200 to-emerald-300 rounded-2xl flex flex-col items-center justify-center text-emerald-700 text-center p-4">
-                      <div className="text-4xl mb-4">🛸</div>
-                      <div className="text-2xl mb-2">🔭</div>
-                      <p className="text-sm font-medium">Alien explorando el futuro con telescopio</p>
-                      <div className="mt-4 flex space-x-2">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse delay-100"></div>
-                        <div className="w-2 h-2 bg-emerald-300 rounded-full animate-pulse delay-200"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -324,11 +332,8 @@ export default function UnifrogLanding() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-left">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
-                {/* Alien meditating/looking in mirror */}
                 <div className="w-12 h-12 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
-                  <span className="text-lg" title="Alien meditando">
-                    🧘‍♂️
-                  </span>
+                  <BrainCircuit className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Autoconocimiento</h3>
@@ -339,11 +344,8 @@ export default function UnifrogLanding() {
 
             <div className="text-left">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
-                {/* Alien with compass/map */}
                 <div className="w-12 h-12 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
-                  <span className="text-lg" title="Alien con brújula">
-                    🧭
-                  </span>
+                  <Compass className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Exploración</h3>
@@ -354,11 +356,8 @@ export default function UnifrogLanding() {
 
             <div className="text-left">
               <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
-                {/* Alien writing in agenda/pointing at calendar */}
                 <div className="w-12 h-12 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
-                  <span className="text-lg" title="Alien planificando">
-                    📅
-                  </span>
+                  <ClipboardList className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Planificación</h3>
@@ -404,6 +403,46 @@ export default function UnifrogLanding() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 bg-gray-50" id="faq">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Preguntas Frecuentes</h2>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+              Resolvemos tus dudas sobre nuestro proceso de orientación vocacional.
+            </p>
+          </div>
+          <div className="space-y-6">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>¿Qué es la orientación vocacional?</AccordionTrigger>
+                <AccordionContent>
+                  La orientación vocacional es un proceso que te ayuda a conocerte mejor (tus intereses, habilidades y valores) para que puedas elegir una carrera o profesión que se alinee con quién sos. Kalo utiliza inteligencia artificial para hacer este proceso más dinámico y personalizado.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>¿Cómo funciona el test vocacional de Kalo?</AccordionTrigger>
+                <AccordionContent>
+                  Nuestro test vocacional es una serie de actividades interactivas diseñadas por expertos en psicopedagogía. No es un examen, sino una herramienta para que reflexiones sobre tus preferencias y aptitudes. La plataforma analiza tus respuestas para darte recomendaciones de carreras personalizadas.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>¿La plataforma solo sirve para encontrar carreras universitarias?</AccordionTrigger>
+                <AccordionContent>
+                  No, nuestro explorador de carreras incluye más de 2500 opciones educativas, tanto universitarias como terciarias y de formación profesional. Queremos que tengas un panorama completo de todas las posibilidades para tu futuro.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>¿Qué hago si no sé qué estudiar?</AccordionTrigger>
+                <AccordionContent>
+                  ¡No te preocupes! Kalo está diseñado precisamente para eso. A través de nuestras herramientas de autoconocimiento y el explorador de carreras, te ayudamos a descubrir opciones que quizás no conocías y a tomar una decisión informada y sin presiones.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form Section */}
       <section className="bg-gray-50 py-16 md:py-20" id="contacto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,30 +482,29 @@ export default function UnifrogLanding() {
               </p>
               <div className="flex space-x-4">
                 <Link
-                  href="#"
+                  href="https://x.com/durantelolo"
                   className="text-gray-400 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
-                  aria-label="Seguinos en Facebook"
-                >
-                  <Facebook className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
-                  aria-label="Seguinos en Twitter"
+                  aria-label="Seguinos en X"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Twitter className="w-5 h-5" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/lolodurante_/"
                   className="text-gray-400 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
                   aria-label="Seguinos en Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Instagram className="w-5 h-5" />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/lorenzodurante-/"
                   className="text-gray-400 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
                   aria-label="Conectá con nosotros en LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Linkedin className="w-5 h-5" />
                 </Link>
@@ -487,7 +525,7 @@ export default function UnifrogLanding() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/blog"
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
                   >
                     Blog
@@ -495,7 +533,7 @@ export default function UnifrogLanding() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/carreras"
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
                   >
                     Carreras
@@ -549,6 +587,12 @@ export default function UnifrogLanding() {
                 className="text-gray-400 hover:text-emerald-400 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
               >
                 Política de privacidad
+              </Link>
+              <Link
+                href="/sitemap"
+                className="text-gray-400 hover:text-emerald-400 text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm"
+              >
+                Mapa del sitio
               </Link>
             </div>
           </div>
