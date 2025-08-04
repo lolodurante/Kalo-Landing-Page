@@ -52,7 +52,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-emerald-500" aria-label="Kalo - Plataforma de orientación vocacional">
+              <Link href="/" className="text-2xl font-bold text-emerald-500" aria-label="Kalo - Plataforma de autoconocimiento para estudiantes">
                 kalo
               </Link>
             </div>
@@ -113,7 +113,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                 </Link>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                La plataforma de orientación vocacional que ayuda a estudiantes a descubrir su futuro.
+                La plataforma de autoconocimiento que ayuda a estudiantes a descubrir su futuro.
               </p>
               <div className="flex space-x-4">
                 <Link href="https://x.com/durantelolo" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-sm" aria-label="Seguinos en X" target="_blank" rel="noopener noreferrer">

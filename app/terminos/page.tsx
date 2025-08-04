@@ -45,8 +45,7 @@ export default function TerminosPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Descripción del Servicio</h2>
               <p className="text-gray-700 leading-relaxed">
-                Kalo es una plataforma de orientación vocacional que ayuda a estudiantes a conocerse mejor, explorar
-                carreras y tomar decisiones informadas sobre su futuro académico y profesional. El servicio incluye
+                Kalo es una plataforma que ofrece herramientas de autoconocimiento y exploración de carreras que ayuda a estudiantes a conocerse mejor y tomar decisiones informadas sobre su futuro académico y profesional. El servicio incluye
                 herramientas de autoconocimiento, información sobre carreras y recursos para docentes.
               </p>
             </section>

@@ -53,7 +53,7 @@ export default function UnifrogLanding() {
   const features = [
     {
       icon: Target,
-      title: "Orientación personalizada",
+      title: "Recomendaciones personalizadas",
       description: "Cada estudiante recibe recomendaciones únicas basadas en su recorrido y decisiones.",
     },
     {
@@ -69,7 +69,7 @@ export default function UnifrogLanding() {
     {
       icon: Lightbulb,
       title: "Contenidos diseñados por expertos",
-      description: "Actividades que promueven un proceso vocacional profundo y reflexivo.",
+      description: "Actividades que promueven un proceso de autoconocimiento profundo y reflexivo.",
     },
     {
       icon: MapPin,
@@ -286,21 +286,21 @@ export default function UnifrogLanding() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Preguntas Frecuentes</h2>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Resolvemos tus dudas sobre nuestro proceso de orientación vocacional.
+              Resolvemos tus dudas sobre nuestro test de autoconocimiento.
             </p>
           </div>
           <div className="space-y-6">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger>¿Qué es la orientación vocacional?</AccordionTrigger>
+                <AccordionTrigger>¿En qué consiste el test de Kalo?</AccordionTrigger>
                 <AccordionContent>
-                  La orientación vocacional es un proceso que te ayuda a conocerte mejor (tus intereses, habilidades y valores) para que puedas elegir una carrera o profesión que se alinee con quién sos. Kalo utiliza inteligencia artificial para hacer este proceso más dinámico y personalizado.
+                  El test de Kalo es una herramienta de autoconocimiento que te ayuda a descubrir tus intereses, habilidades y valores. A través de actividades interactivas, te conocés mejor y podés explorar carreras y profesiones que se alineen con tu personalidad. Utilizamos inteligencia artificial para hacer este proceso más dinámico y personalizado.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>¿Cómo funciona el test vocacional de Kalo?</AccordionTrigger>
+                <AccordionTrigger>¿Cómo funciona el test de autoconocimiento de Kalo?</AccordionTrigger>
                 <AccordionContent>
-                  Nuestro test vocacional es una serie de actividades interactivas diseñadas por expertos en psicopedagogía. No es un examen, sino una herramienta para que reflexiones sobre tus preferencias y aptitudes. La plataforma analiza tus respuestas para darte recomendaciones de carreras personalizadas.
+                  Nuestro test de autoconocimiento es una serie de actividades interactivas diseñadas por expertos en psicopedagogía. No es un examen, sino una herramienta para que reflexiones sobre tus preferencias, intereses y aptitudes. La plataforma analiza tus respuestas para darte recomendaciones de carreras personalizadas.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">

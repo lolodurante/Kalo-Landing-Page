@@ -10,11 +10,11 @@ import {
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
-  description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
+  title: "Kalo para Colegios | Potenciá el Desarrollo Personal de tus Alumnos",
+  description: "Descubrí cómo Kalo puede transformar el desarrollo personal en tu colegio. Ofrecemos herramientas de autoconocimiento con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
   openGraph: {
-    title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
-    description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
+    title: "Kalo para Colegios | Potenciá el Desarrollo Personal de tus Alumnos",
+    description: "Descubrí cómo Kalo puede transformar el desarrollo personal en tu colegio. Ofrecemos herramientas de autoconocimiento con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
     url: "https://www.trykalo.app/colegios",
     siteName: "Kalo",
     images: [
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
-    description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA y seguimiento personalizado.",
+    title: "Kalo para Colegios | Potenciá el Desarrollo Personal de tus Alumnos",
+    description: "Descubrí cómo Kalo puede transformar el desarrollo personal en tu colegio. Ofrecemos herramientas de autoconocimiento con IA y seguimiento personalizado.",
     images: ["https://www.trykalo.app/og-colegios.png"], // Asegúrate de crear esta imagen
   },
   alternates: {
@@ -49,7 +49,7 @@ export default function ColegiosPage() {
             Acompañá a tus estudiantes en una de las decisiones más importantes de su vida.
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Kalo es una plataforma de orientación vocacional asistida con inteligencia artificial, pensada para que los colegios puedan guiar mejor a sus estudiantes en el camino de elegir qué estudiar.
+            Kalo es una plataforma de autoconocimiento asistida con inteligencia artificial, pensada para que los colegios puedan guiar mejor a sus estudiantes en el camino de elegir qué estudiar.
           </p>
           <div className="mt-10 flex justify-center">
             <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 group">
@@ -121,7 +121,7 @@ export default function ColegiosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Una plataforma integral de orientación vocacional para colegios
+                Una plataforma integral de autoconocimiento para colegios
               </h2>
               <p className="text-gray-600 leading-relaxed">
                 Kalo combina inteligencia artificial, actividades guiadas de autoconocimiento y una base de datos con más de 2.500 carreras de todo el país. Está pensada para integrarse al trabajo del colegio, no reemplazarlo.
@@ -152,7 +152,7 @@ export default function ColegiosPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Tecnología con mirada educativa</h3>
-                  <p className="text-gray-600">Nuestra IA está entrenada por especialistas en educación y orientación vocacional.</p>
+                  <p className="text-gray-600">Nuestra IA está entrenada por especialistas en educación y psicopedagogía.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -183,7 +183,7 @@ export default function ColegiosPage() {
                 <div className="bg-emerald-100 rounded-full p-3">
                   <Bot className="w-6 h-6 text-emerald-600" />
                 </div>
-                <h3 className="font-bold text-xl">Test vocacional potenciado por IA</h3>
+                <h3 className="font-bold text-xl">Test de autoconocimiento potenciado por IA</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">Personalizado, progresivo, profundo. No es un test de 5 minutos.</p>
             </div>
@@ -366,7 +366,7 @@ export default function ColegiosPage() {
                 Desarrollado en Argentina, con mirada educativa
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Kalo nació de una experiencia personal: la falta de herramientas reales al momento de elegir qué estudiar. Hoy somos un equipo de emprendedores y educadores comprometidos con transformar la orientación vocacional en Latinoamérica.
+                Kalo nació de una experiencia personal: la falta de herramientas reales al momento de elegir qué estudiar. Hoy somos un equipo de emprendedores y educadores comprometidos con transformar el futuro de la educación en Latinoamérica.
               </p>
             </div>
             <div className="space-y-6">
