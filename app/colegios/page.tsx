@@ -1,13 +1,43 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { 
-  Download, MessageCircle, ArrowRight, Info, BookX, BrainCircuit, Bot, Monitor, 
+import {
+  Download, MessageCircle, ArrowRight, Info, BookX, BrainCircuit, Bot, Monitor,
   Lightbulb, Users, Search, BookCopy, HandHeart, CheckCircle,
   LayoutDashboard, FileText, BarChart, PlusCircle, Rocket, Layers, GitMerge,
-  Star, Trophy, Flag, Combine, AlertTriangle, TrendingDown
+  Star, Trophy, Flag, Combine, AlertTriangle
 } from "lucide-react"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
+  description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
+  openGraph: {
+    title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
+    description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA, seguimiento de estudiantes y contenido adaptado para preparar a tus alumnos para el futuro.",
+    url: "https://www.trykalo.app/colegios",
+    siteName: "Kalo",
+    images: [
+      {
+        url: "https://www.trykalo.app/og-colegios.png", // Asegúrate de crear esta imagen
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kalo para Colegios | Potenciá la Orientación Vocacional",
+    description: "Descubrí cómo Kalo puede transformar la orientación vocacional en tu colegio. Ofrecemos herramientas con IA y seguimiento personalizado.",
+    images: ["https://www.trykalo.app/og-colegios.png"], // Asegúrate de crear esta imagen
+  },
+  alternates: {
+    canonical: "https://www.trykalo.app/colegios",
+  },
+}
+
 
 export default function ColegiosPage() {
   return (
@@ -21,18 +51,12 @@ export default function ColegiosPage() {
           <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Kalo es una plataforma de orientación vocacional asistida con inteligencia artificial, pensada para que los colegios puedan guiar mejor a sus estudiantes en el camino de elegir qué estudiar.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-10 flex justify-center">
             <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 group">
               <Link href="/contacto">
                 Solicitar una demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-            </Button>
-            <Button asChild size="lg" variant="ghost" className="text-emerald-600 hover:bg-emerald-100 px-8 py-3 text-lg font-semibold transition-all duration-200 group">
-              <a href="https://wa.me/541122360914" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                <MessageCircle className="mr-2 w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-                Hablar por WhatsApp
-              </a>
             </Button>
           </div>
         </div>

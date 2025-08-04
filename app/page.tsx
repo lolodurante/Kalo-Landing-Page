@@ -179,24 +179,16 @@ export default function UnifrogLanding() {
             <p>Kalo ayuda a estudiantes a conocerse mejor. Explorá miles de carreras y tomá decisiones informadas.</p>
             <p>Potenciamos a docentes y orientadores con herramientas y datos para acompañar mejor este proceso.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
             >
               <Link href="/contacto">
-                Contactanos
+                Solicitar una demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 px-8 py-3 text-lg font-semibold bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-              onClick={() => scrollToSection("caracteristicas")}
-            >
-              Conocé más
             </Button>
           </div>
         </div>
@@ -344,7 +336,7 @@ export default function UnifrogLanding() {
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
               onClick={() => (window.location.href = "/contacto")}
             >
-              Contactanos
+              Solicitar una demo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Button>
           </div>
