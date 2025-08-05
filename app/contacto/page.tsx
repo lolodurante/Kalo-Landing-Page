@@ -66,7 +66,7 @@ export default function ContactoPage() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/lorenzo@trykalo.app", {
+      const response = await fetch("https://formsubmit.co/ajax/254ce024dfd56255d341bdb117cdee97", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
