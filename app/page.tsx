@@ -286,21 +286,21 @@ export default function UnifrogLanding() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Preguntas Frecuentes</h2>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Resolvemos tus dudas sobre nuestro test de autoconocimiento.
+              Resolvemos tus dudas sobre nuestras herramientas de autoconocimiento.
             </p>
           </div>
           <div className="space-y-6">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger>¿En qué consiste el test de Kalo?</AccordionTrigger>
+                <AccordionTrigger>¿En qué consisten las herramientas vocacionales de Kalo?</AccordionTrigger>
                 <AccordionContent>
-                  El test de Kalo es una herramienta de autoconocimiento que te ayuda a descubrir tus intereses, habilidades y valores. A través de actividades interactivas, te conocés mejor y podés explorar carreras y profesiones que se alineen con tu personalidad. Utilizamos inteligencia artificial para hacer este proceso más dinámico y personalizado.
+                  Las herramientas de Kalo son un conjunto de actividades de autoconocimiento que te ayudan a descubrir tus intereses, habilidades y valores. A través de ellas, te conocés mejor y podés explorar carreras y profesiones que se alineen con tu personalidad. Utilizamos inteligencia artificial para hacer este proceso más dinámico y personalizado.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>¿Cómo funciona el test de autoconocimiento de Kalo?</AccordionTrigger>
+                <AccordionTrigger>¿Cómo funcionan las herramientas de autoconocimiento de Kalo?</AccordionTrigger>
                 <AccordionContent>
-                  Nuestro test de autoconocimiento es una serie de actividades interactivas diseñadas por expertos en psicopedagogía. No es un examen, sino una herramienta para que reflexiones sobre tus preferencias, intereses y aptitudes. La plataforma analiza tus respuestas para darte recomendaciones de carreras personalizadas.
+                  Nuestro proceso de autoconocimiento se basa en una serie de actividades interactivas diseñadas por expertos en psicopedagogía. No es un examen, sino una guía para que reflexiones sobre tus preferencias, intereses y aptitudes. La plataforma analiza tus respuestas para darte recomendaciones de carreras personalizadas.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
