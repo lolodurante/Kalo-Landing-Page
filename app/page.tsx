@@ -264,10 +264,10 @@ export default function UnifrogLanding() {
               return (
                 <Card
                   key={index}
-                  className="border border-gray-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 bg-white h-full group cursor-pointer transform hover:-translate-y-1"
+                  className="border border-gray-200 bg-white h-full"
                 >
                   <CardContent className="p-6 md:p-8 text-left h-full flex flex-col">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-200 transition-colors duration-300">
+                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
                       <IconComponent className="w-8 h-8 text-emerald-600" aria-hidden="true" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
