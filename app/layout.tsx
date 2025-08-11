@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google"
 import "./globals.css"
 import HeaderAndFooter from "@/components/layout/HeaderAndFooter"
 import { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body className={`${poppins.variable} font-sans bg-white font-poppins`}>
         <HeaderAndFooter>{children}</HeaderAndFooter>
+        <Analytics />
       </body>
     </html>
   )
