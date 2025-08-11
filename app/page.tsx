@@ -173,11 +173,11 @@ export default function UnifrogLanding() {
       <main className="flex flex-col justify-center items-center text-center min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="inicio">
         <div className="space-y-6 md:space-y-8 max-w-4xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-            Descubrí tu futuro con la plataforma más completa.
+            Descubrí qué estudiar y elegí con confianza.
           </h1>
           <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
-            <p>Kalo ayuda a estudiantes a conocerse mejor. Explorá miles de carreras y tomá decisiones informadas.</p>
-            <p>Potenciamos a docentes y orientadores con herramientas y datos para acompañar mejor este proceso.</p>
+            <p>Comenzá con una actividad de autoconocimiento, explorá miles de carreras reales y recibí recomendaciones personalizadas para tu futuro.</p>
+            <p className="text-emerald-700 font-semibold">Por tiempo limitado, registrate gratis y empezá hoy.</p>
           </div>
           <div className="flex justify-center">
             <Button
@@ -185,8 +185,8 @@ export default function UnifrogLanding() {
               size="lg"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
             >
-              <Link href="/contacto">
-                Solicitar una demo
+              <Link href="https://platform.trykalo.app/register">
+                Registrate gratis
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </Button>
@@ -324,20 +324,22 @@ export default function UnifrogLanding() {
       <section className="bg-gray-50 py-16 md:py-20" id="contacto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">¿Te interesa Kalo?</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Registrate gratis</h2>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Hablemos sobre cómo puede ayudar a tu institución.
+              Creá tu cuenta y empezá a explorar carreras y conocerte mejor. Gratis por tiempo limitado.
             </p>
           </div>
 
           <div className="flex justify-center">
             <Button
+              asChild
               size="lg"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
-              onClick={() => (window.location.href = "/contacto")}
             >
-              Solicitar una demo
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              <Link href="https://platform.trykalo.app/register">
+                Registrate gratis
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
             </Button>
           </div>
         </div>

@@ -84,7 +84,7 @@ export default function ColegiosPage() {
                 <BookX className="w-8 h-8 text-rose-500" />
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Los tests vocacionales tradicionales son <strong>costosos, genéricos</strong> y a menudo insuficientes para una decisión tan importante.
+                Las herramientas vocacionales tradicionales son <strong>costosas, genéricas</strong> y a menudo insuficientes para una decisión tan importante.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -161,7 +161,7 @@ export default function ColegiosPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Acompañamiento real</h3>
-                  <p className="text-gray-600">Vamos más allá del test y los resultados, guiando a los estudiantes en cada etapa.</p>
+                  <p className="text-gray-600">Vamos más allá de la herramienta y los resultados, guiando a los estudiantes en cada etapa.</p>
                 </div>
               </div>
             </div>
@@ -183,9 +183,9 @@ export default function ColegiosPage() {
                 <div className="bg-emerald-100 rounded-full p-3">
                   <Bot className="w-6 h-6 text-emerald-600" />
                 </div>
-                <h3 className="font-bold text-xl">Test de autoconocimiento potenciado por IA</h3>
+                <h3 className="font-bold text-xl">Proceso de autoconocimiento guiado por IA</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">Personalizado, progresivo, profundo. No es un test de 5 minutos.</p>
+              <p className="text-gray-600 leading-relaxed">Personalizado, progresivo, profundo. No es una actividad superficial de 5 minutos.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="flex items-center gap-4 mb-4">

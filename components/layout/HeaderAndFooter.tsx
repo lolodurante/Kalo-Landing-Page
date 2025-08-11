@@ -29,6 +29,32 @@ import { usePathname } from 'next/navigation'
 export default function HeaderAndFooter({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+  const [showAnnouncement, setShowAnnouncement] = useState<boolean>(true)
+
+  // Persist announcement dismissal for a limited time
+  useEffect(() => {
+    const DISMISS_TTL_MS = 1000 * 60 * 60 * 24 * 7 // 7 days
+    try {
+      const raw = localStorage.getItem('kalo_announcement_dismissed_at')
+      if (raw) {
+        const dismissedAt = Number(raw)
+        if (!Number.isNaN(dismissedAt) && Date.now() - dismissedAt < DISMISS_TTL_MS) {
+          setShowAnnouncement(false)
+        }
+      }
+    } catch {
+      // no-op
+    }
+  }, [])
+
+  const dismissAnnouncement = () => {
+    setShowAnnouncement(false)
+    try {
+      localStorage.setItem('kalo_announcement_dismissed_at', String(Date.now()))
+    } catch {
+      // no-op
+    }
+  }
 
   const scrollToSection = (sectionId: string) => {
     if (pathname !== '/') {
@@ -49,6 +75,29 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
   return (
     <>
       <header className="border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
+        {showAnnouncement && pathname === '/' && (
+          <div className="bg-emerald-600 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-center gap-3">
+              <span className="text-sm font-medium">
+                Por tiempo limitado: la plataforma es gratis
+              </span>
+              <Link
+                href="https://platform.trykalo.app/register"
+                className="text-sm font-semibold underline decoration-2 underline-offset-2 hover:opacity-90"
+              >
+                Registrate gratis
+              </Link>
+              <button
+                type="button"
+                onClick={dismissAnnouncement}
+                aria-label="Cerrar anuncio"
+                className="ml-2 rounded p-1 hover:bg-emerald-700/60 focus:outline-none focus:ring-2 focus:ring-white/70"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -74,7 +123,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
             <Button asChild variant="outline" size="lg" className="hidden md:flex border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 px-6 py-2 font-semibold">
-              <Link href="/contacto">Contactanos</Link>
+              <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
             </Button>
           </div>
           {isMenuOpen && (
@@ -93,7 +142,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                   CONTACTO
                 </Link>
                 <Button asChild variant="outline" size="lg" className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 bg-transparent w-full mt-4 font-semibold">
-                  <Link href="/contacto">Contactanos</Link>
+                  <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
                 </Button>
               </nav>
             </div>
@@ -126,6 +175,13 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                   <Linkedin className="w-5 h-5" />
                 </Link>
               </div>
+              <Button
+                asChild
+                size="lg"
+                className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white border-2 border-emerald-500 px-6 py-2 font-semibold transition-all duration-200"
+              >
+                <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
+              </Button>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Empresa</h3>
