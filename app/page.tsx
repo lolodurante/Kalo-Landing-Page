@@ -185,7 +185,7 @@ export default function UnifrogLanding() {
               size="lg"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
             >
-              <Link href="https://platform.trykalo.app/register">
+              <Link href="https://platform.trykalo.app/onboarding">
                 Registrate gratis
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
@@ -336,7 +336,7 @@ export default function UnifrogLanding() {
               size="lg"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 group border-2 border-emerald-500"
             >
-              <Link href="https://platform.trykalo.app/register">
+              <Link href="https://platform.trykalo.app/onboarding">
                 Registrate gratis
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>

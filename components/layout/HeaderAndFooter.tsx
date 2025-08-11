@@ -82,7 +82,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                 Por tiempo limitado: la plataforma es gratis
               </span>
               <Link
-                href="https://platform.trykalo.app/register"
+                href="https://platform.trykalo.app/onboarding"
                 className="text-sm font-semibold underline decoration-2 underline-offset-2 hover:opacity-90"
               >
                 Registrate gratis
@@ -123,7 +123,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
             <Button asChild variant="outline" size="lg" className="hidden md:flex border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-600 bg-transparent transition-all duration-200 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 px-6 py-2 font-semibold">
-              <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
+              <Link href="https://platform.trykalo.app/onboarding">Registrate gratis</Link>
             </Button>
           </div>
           {isMenuOpen && (
@@ -142,7 +142,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                   CONTACTO
                 </Link>
                 <Button asChild variant="outline" size="lg" className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 bg-transparent w-full mt-4 font-semibold">
-                  <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
+                  <Link href="https://platform.trykalo.app/onboarding">Registrate gratis</Link>
                 </Button>
               </nav>
             </div>
@@ -180,7 +180,7 @@ export default function HeaderAndFooter({ children }: { children: React.ReactNod
                 size="lg"
                 className="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white border-2 border-emerald-500 px-6 py-2 font-semibold transition-all duration-200"
               >
-                <Link href="https://platform.trykalo.app/register">Registrate gratis</Link>
+                <Link href="https://platform.trykalo.app/onboarding">Registrate gratis</Link>
               </Button>
             </div>
             <div className="space-y-4">
