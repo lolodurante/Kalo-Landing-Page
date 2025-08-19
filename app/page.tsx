@@ -6,12 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-} from "@/components/ui/breadcrumb"
+
 import {
   BrainCircuit,
   Compass,
@@ -47,8 +42,7 @@ export default function UnifrogLanding() {
     name: "",
     email: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+
 
   const features = [
     {
@@ -83,14 +77,6 @@ export default function UnifrogLanding() {
     },
   ]
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-    setIsMenuOpen(false)
-  }
-
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
@@ -124,20 +110,6 @@ export default function UnifrogLanding() {
       return
     }
 
-    setIsSubmitting(true)
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", institution: "", message: "" })
-    setFormErrors({ name: "", email: "" })
-
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-    }, 5000)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -147,7 +119,6 @@ export default function UnifrogLanding() {
       [name]: value,
     })
 
-    // Clear errors when user starts typing
     if (formErrors[name as keyof typeof formErrors]) {
       setFormErrors({
         ...formErrors,
@@ -156,22 +127,13 @@ export default function UnifrogLanding() {
     }
   }
 
-  // Alien Rocket Icon Component
-  const AlienRocketIcon = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L14 8L20 6L16 12L22 14L12 22L2 14L8 12L4 6L10 8L12 2Z" fill="currentColor" opacity="0.8" />
-      <circle cx="12" cy="10" r="2" fill="white" />
-      <path d="M10 16L12 18L14 16" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-
   return (
     <div className="min-h-screen bg-white font-poppins">
 
 
       {/* Hero Section */}
-      <main className="flex flex-col justify-center items-center text-center min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="inicio">
-        <div className="space-y-6 md:space-y-8 max-w-4xl">
+      <main className="flex flex-row justify-center items-center text-left min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="inicio">
+        <div className="space-y-6 md:space-y-8 max-w-4xl w-1/2">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
             Descubrí qué estudiar y elegí con confianza.
           </h1>
@@ -179,7 +141,7 @@ export default function UnifrogLanding() {
             <p>Comenzá con una actividad de autoconocimiento, explorá miles de carreras reales y recibí recomendaciones personalizadas para tu futuro.</p>
             <p className="text-emerald-700 font-semibold">Por tiempo limitado, registrate gratis y empezá hoy.</p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <Button
               asChild
               size="lg"
@@ -191,6 +153,9 @@ export default function UnifrogLanding() {
               </Link>
             </Button>
           </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-1/2 ml-4">
+          <img src="/images/telescopio-invertido.png" />
         </div>
       </main>
 
